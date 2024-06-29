@@ -30,8 +30,8 @@ let header = `
                     <li><a href="catalogo.html">Catalogo</a></li>
                     <li><a href="formulario.html">Contactanos</a></li>
                     <li><a href="sobrenos.html">Nosotros</a></li>
-                    <li><a href="usuarios.html">Usuarios</a></li>
-                    <li><a href="index_.html">Administrador</a></li>
+                    <li><a href="usuarios.html">Administrador</a></li>
+                    
                 </ul>
         </nav>
 
