@@ -54,6 +54,7 @@
     <script src="js/insert.js"></script> 
     <script src="js/validacion1.js"></script>   
     <script>
+       function verificarUsuario() { 
         //const URL = "http://127.0.0.1:5000/"
         const URL = "https://famazam.pythonanywhere.com/"
         let nombreUsuario = document.getElementById("nombreUsuario").value;
@@ -77,7 +78,7 @@
                     }
                 }
             })
-        
+       }
     
     function borrarFormularioUsuario() {
         const form = document.getElementById('formulario');
