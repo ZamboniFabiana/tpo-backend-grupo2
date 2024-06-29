@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Phone Celulares</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/phonicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/principal.css">
+    <script src="js/validacion1.js"></script>
+</head>
+
+<body>
+    <header id="idheader">
+    </header>
+    
+    <div class="padre">
+
+        <!-- Creamos formulario -->
+        <h1 class="texto-principal">Formulario de contacto</h1>
+        <form action="/js/validacion1.js" id="formulario" method="post">
+
+            <div class="contenedorFormulario">
+                <div class="divItem">
+                    <label for="nombre" class="labelFormulario" id="etiquetaNombre"> Nombre *</label>
+                    <input type="text" id="nombre" class="inputFormulario" onblur="validarNombre()">
+                </div>
+
+                <div class="divItem">
+                    <label for="apellido" class="labelFormulario" id="etiquetaApellido"> Apellido *</label>
+                    <input type="text" id="apellido" class="inputFormulario" onblur="validarApellido()">
+                </div>
+
+                <div class = " divItem">
+                    <label for="fechaNacimiento" class="labelFormulario" id="etiquetaFechaNacimiento"> Fecha de
+                        nacimiento *</label>
+                    <input type="date" id="fechaNacimiento" class="inputFormulario" onblur="validarFechaNacimiento()">
+                </div>
+
+                <div class="divItem">
+                    <label for="edad" class="labelFormulario" id="etiquetaEdad"> Edad *</label>
+                    <input type="number" id="edad" class="inputFormulario" onblur="validarEdad()">
+                </div>
+
+                <fieldset>
+                    <legend><label for="sexo">Sexo *</label></legend>
+                    <label for="sexo" class="margen"> Seleccione una opción </label>
+                    <br>
+                    <label class="margen">femenino</label>
+                    <input type="radio" name="sexo" id="sexo" value="femenino" checked>
+                    <label>masculino</label>
+                    <input type="radio" name="sexo" id="sexo" value="masculino">
+                </fieldset>
+
+                <div class="divItem">
+                    <label for="tipoDocumento" class="labelFormulario"> Seleccione el tipo de documento *</label>
+                    <select name="tipoDocumento" id="tipoDocumento" class="inputFormulario">
+                        <option value="dni">DNI </option>
+                        <option value="le">LE</option>
+                        <option value="lc">LC</option>
+                    </select>
+                </div>
+
+                <div class="divItem">
+                    <label for="numeroDocumento" class="labelFormulario" id="etiquetaNumeroDocumento"> Ingrese el N°
+                        de documento *</label>
+                    <input type="text" id="numeroDocumento" class="inputFormulario" onblur="validarNumeroDocumento()">
+                </div>
+
+                <div class="divItem">
+                    <label for="email" class="labelFormulario" id="etiquetaEmail"> Correo *</label>
+                    <input type="email" id="email" class="inputFormulario" onblur="validarEmail()">
+                </div>
+
+                <div class="divItem2">
+                    <fieldset>
+                        <legend><label for="comentario" class="labelFormulario" id="etiquetaComentario"> Comentario
+                                *</label></legend>
+                        <textarea id="comentario" rows="10" class="textarea"
+                            onblur="validarComentario()">Escriba su comentario </textarea>
+                    </fieldset>
+                </div>
+                <div class="divItem">
+                    <label for="archivo" class="labelFormulario"> Agregue un archivo si lo desea</label>
+                    <input type="file" name="archivo" id="archivo">
+
+                </div>
+                <div class="divItem">
+                    <p class="pFormulario"> * los datos son obligatorios</p>
+                </div>
+                
+
+                <div class="divBotones">
+                    <button class=" " type="button" onclick="verificarDatos()">Enviar</button>
+                    <button class=" " type="button" onclick="borrarFormulario()">Limpiar</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- ********************************************************************** -->
+        <div class="contenedorFormulario" id="divConfirmacion">
+            <h1 class="texto-principal">Datos enviados correctamente</h1>
+            <span id="mostrarNombre"></span>
+            <span id="mostrarApellido"></span>
+            <span id="mostrarFechaNacimiento"></span>
+            <span id="mostrarEdad"></span>
+            <span id="mostrarSexo"></span>
+            <span id="mostrarTipoDocumento"></span>
+            <span id="mostrarNumeroDocumento"></span>
+            <span id="mostrarEmail"></span>
+            <span id="mostrarComentario"></span>
+            <span id="mostrarArchivo"></span>
+            <br>
+            <button onclick="irAlIndex()">Página Principal</button>
+        </div>
+        <!-- ********************************************************************** -->
+
+        <!-- Footer -->
+        <footer id="idfooter"> </footer>
+        
+    </div>
+
+    
+    <script src="js/insert.js"></script> 
+    <script src="js/validacion1.js"></script>   
+</body>
+
+</html>

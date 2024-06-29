@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Phone Celulares</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/phonicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/principal.css">
+</head>
+
+<body>
+    <header id="idheader">
+    </header>
+
+    <!-- <body> -->
+        <!-- Creamos contenedor padre -->
+        <div class="padre">
+
+            <!-- Creamos section con carrusel -->
+
+            <!-- Contenedor padre -->
+            <main class="contenedor">
+
+                <div class="carousel">
+                    <div class="oculta aparece">
+                        <img class="imgGrupo1" src="img/sam_ok.jpg" alt="imagen1">
+                        <img style=display:none class="imgGrupo2" src="img/Sam-new.jpg" alt="imagen1">
+                        <img style=display:none class="imgGrupo3" src="img/sam-movil.jpg" alt="imagen1">
+                    </div>
+                    <div class="oculta aparece">
+                        <img class="imgGrupo1" src="img/moto_ok.jpg" alt="imagen2">
+                        <img style=display:none class="imgGrupo2" src="img/Moto-new.jpg" alt="imagen2">
+                        <img style=display:none class="imgGrupo3" src="img/moto-movil.jpg" alt="imagen2">
+                    </div>
+                    <div class="oculta aparece">
+                        <img class="imgGrupo1" src="img/xiao_ok.jpg" alt="imagen3">
+                        <img style=display:none class="imgGrupo2" src="img/xiao-new.jpg" alt="imagen3">
+                        <img style=display:none class="imgGrupo3" src="img/xiao-movil.jpg" alt="imagen3">
+                    </div>
+                    <div class="oculta aparece">
+                        <img class="imgGrupo1" src="img/zte_ok.jpg" alt="imagen4">
+                        <img style=display:none class="imgGrupo2" src="img/zte-new.jpg" alt="imagen4">
+                        <img style=display:none class="imgGrupo3" src="img/zte-movil.jpg" alt="imagen4">
+                    </div>
+                    <a class="prev" onclick="desplazar(-1)">&#10094;</a>
+                    <a class="next" onclick="desplazar(1)">&#10095;</a>
+                </div>
+
+                <div class="puntos" style="text-align:center">
+                    <span class="punto" onclick="actualizar(1)"></span>
+                    <span class="punto" onclick="actualizar(2)"></span>
+                    <span class="punto" onclick="actualizar(3)"></span>
+                    <span class="punto" onclick="actualizar(4)"></span>
+                </div>
+
+            </main>
+
+            <!-- Footer -->
+            <footer id="idfooter"> </footer>
+
+        </div>
+        <!-- </div> -->
+
+        <script src="js/script.js"></script>
+        <script src="js/insert.js"></script>
+    </body>
+
+</html>

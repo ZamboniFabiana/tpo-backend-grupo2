@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Phone Celulares</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/phonicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/principal.css">
+    <!-- <script src="js/validacionUsuario.js"></script> -->
+</head>
+
+<body>
+    <header id="idheader">
+    </header>
+    
+    <div class="padre">
+
+        <!-- Creamos formulario -->
+        <h1 class="texto-principal">Formulario de usuario</h1>
+        <!-- <form action="/js/validacionUsuario.js" id="formulario" method="post"> -->
+        <form id="formulario" method="post">
+
+            <div class="contenedorFormulario">
+                <div class="divItem">
+                    <label for="nombreUsuario" class="labelFormulario" id="etiquetaNombrUsuario"> Nombre de usuario *</label>
+                    <input type="text" id="nombreUsuario" class="inputFormulario" onblur="validarNombreUsuario()">
+                </div>
+
+                <div class="divItem">
+                    <label for="claveUsuario" class="labelFormulario" id="etiquetaClaveUsuario"> Clave de Usauario *</label>
+                    <input type="password" id="claveUsuario" class="inputFormulario" onblur="validarClaveUsuario()">
+                </div>
+                
+                <div class="divItem">
+                    <p class="pFormulario"> * los datos son obligatorios</p>
+                </div>
+                
+                <div class="divBotones">
+                    <button class="contenedorFormulario " type="button" onclick="verificarUsuario()">Enviar</button>
+                    <button class="contenedorFormulario " type="button" onclick="borrarFormularioUsuario()">Limpiar</button>
+                </div>
+            </div>
+        </form>
+
+        <footer id="idfooter"> </footer>
+        
+    </div>
+
+    
+    <script src="js/insert.js"></script> 
+    <script src="js/validacion1.js"></script>   
+    <script>
+        //const URL = "http://127.0.0.1:5000/"
+        const URL = "https://famazam.pythonanywhere.com/"
+        let nombreUsuario = document.getElementById("nombreUsuario").value;
+        let claveUsuario = document.getElementById("claveUsuario").value;
+        fetch(URL + 'usuarios')
+            .then(function (response) {
+                if (response.ok) {
+                    return response.json()
+                } else {
+                    throw new Error('Error al obtener usuarios')
+                }
+            })
+            .then(function (data) {
+                for (let usuario of data) {
+                    if (nombreUsuario === usuario.nombreUsuario && claveUsuario === usuario.claveUsuario) {
+                        window.location.href = "index_.html";
+                        return true;
+                    }else{
+                        alert("Usuario desconocido o no tiene permiso de administrador")
+                        window.location.href = "index.html";
+                    }
+                }
+            })
+        
+    
+    function borrarFormularioUsuario() {
+        const form = document.getElementById('formulario');
+        form.reset();
+    }
+   </script>
+ 
+
+</body>
+
+</html>
