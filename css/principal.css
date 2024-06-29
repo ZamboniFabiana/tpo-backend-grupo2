@@ -1,0 +1,905 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+/* 
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+   */
+
+.padre{
+    /* background-color: #124076; */
+    display:flex;
+    flex-flow: column;
+    /* position: relative; */
+    /* padding-top: 2em; */
+}
+
+
+header{
+    position: relative;
+}
+
+.menu{
+    /* background-color: #FFC374; */
+    display: grid;
+    grid-template-columns: 1fr 5fr 2fr;
+}
+
+.logo{
+    max-height: 70px;
+    position: relative;
+}
+
+.logo img{
+    /* width: 50%; */
+    margin: -2.3em 0 0 2em;
+    max-height: 9em;
+    position: relative;
+    z-index: -1;    
+}
+
+.panel-sup{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    max-height: 70px;
+    /* display: flex; */
+    /* flex-flow: row; */
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    /* z-index: -1; */
+}
+
+.barrabusqueda{
+    /* border: 1px solid black; */
+    width: 100%;
+    position: relative;
+}
+
+.barrabusqueda input{
+    width: 100%;
+    align-items: center;
+    padding-left: 25px;
+    height: 2em;
+    background-color: rgba(195, 87, 15, 0.5);
+    border-radius: 5px;
+}
+
+.barrabusqueda img{
+    position: absolute;
+    top: 25%;
+    left: 0.5em;
+    cursor:text;
+}
+
+.usuario{
+    margin-right: 1em;
+}
+
+.navegador{
+    display: flex;
+    flex-flow: row wrap; 
+    background-color: black;
+    padding: 10px;
+    justify-content: center;
+    height: 60%; /*agregue esta línea y así se achicó el menú*/
+}
+
+.navegador li{
+    list-style-type: none;
+    margin-left: 3em;
+    margin-right: 3em;
+    font-size: 0.9em;
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+/* nav {
+    margin: auto;
+} */
+
+
+.navegador a{
+    /* background-color: #F9E897; */
+    /* text-align: center; */
+    /* position: inline-blok; */
+    /* margin: 0 15px; */
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 0 0.2em;
+}
+
+.navegador a:hover{
+    color: #c3570f;
+    background-color: #d1cdcb;
+    padding: 0.2em 0.2em;
+    border-radius: 5px;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: aliceblue;
+    float: right; 
+    margin: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+    float: right;
+}
+
+@media (max-width: 858px){
+    .logo img{
+        margin: -2em 0 0 0.8em;
+        max-height: 8em;   
+    }
+
+    .panel-sup{
+        grid-template-columns: 1fr 2fr 1fr;
+        max-height: 70px;
+        width: 80%;
+        margin-left: 3%;
+    }
+       
+    .barrabusqueda input{
+        height: 3em;
+    }
+    
+    .barrabusqueda img{
+        left: 0.5em;
+    }
+    
+    .usuario{
+        margin-right: 1em;
+    }
+    
+
+.checkbtn{
+    display: block;
+    /* margin-top: -7%; 
+    margin-right: 10%; */
+    margin-top: -2em; 
+    margin-right: 0.5em;
+    /* posicion hamburguesa */
+    z-index: 2; 
+}
+
+ul{
+    position: fixed;
+    width: auto;
+    height: auto !important;
+    /* background: #50372c; */
+    /* background-color: #c3570f; */
+    opacity: 0.8;
+
+    top: 75px;
+    /* left: -100%; */
+    top: -100%;
+    left: 100%;
+    text-align: center;
+    transition: all .5s;
+}
+nav ul li{
+    display: block;
+    /* margin: 4em 0; modifiqué esta línea por la siguiente */
+    /* margin: 0.1em 0.1em; */
+    /* line-height: 30px; */
+    /* background-color: #c3570f; */
+    color: aliceblue;
+    text-align: center;
+}
+nav ul li a{
+    font-size: 3.5vw;
+    /* padding: 30px 0px; */
+    /* padding-top: 20px;
+    margin-bottom: 20px; */
+    text-align: center;
+}
+/* li a:hover, li a.active{
+    background: none;
+    color: red;
+} */
+
+li{
+    padding-bottom: 1.2em;
+    padding-top: 1.2em;
+    /* margin: 0.5em; */
+    text-align: center;
+}
+#check:checked ~ ul{
+    /* left:60%; */
+    top:7.6%;
+    left: 60%;
+    z-index: 1;
+}
+
+.navegador{
+    /* display: flex; */
+    display: block;
+    /* flex-flow: row wrap;  */
+    background-color: black;
+    padding: 1em;
+    justify-content: center;
+}
+/* nav img{
+    margin-top: -20%;
+    z-index: 5;
+} */
+}
+
+/* div a{
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+} */
+
+
+
+.carrito{
+    /* background-color: #F9E897; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-right: 15px; */
+}
+
+/* .section {
+    background-color: #7F9F80; 
+    
+        
+} */
+.productos{
+    background-color: #FFC374;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+.producto{
+    background-color: #F9E897;
+    display: grid;
+    align-items: center;
+    text-align: center
+}
+
+.texto-principal{
+    padding-top: 1em;
+    text-align: center;
+
+}
+
+.texto-secundario{
+    width: 70%;
+    margin: auto;
+    text-align: center;  
+}
+
+
+/* 
+.contenedor{
+    width: 100%;
+    height: 75vh; 
+    /* max-width: 350px; */
+    /* background-color: rgb(214, 240, 98); */
+    /* border-radius: 5px; */
+    /* margin: 20px auto; */
+    /* overflow: hidden; */
+    /* box-shadow: 0 0 0 5px #d0cece, 0 15px 50px; */
+   /*  position: relative;
+} */
+
+/* Contenedor del Carousel y de los Puntos______________________________________ */
+.contenedor{
+    /* width: 100%; */
+    height: 100%;
+    /* background-color: rgb(214, 240, 98); */
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+}
+
+/* Contenedor de las imágenes y los botones flechas */
+.carousel{
+    position: relative;
+    margin:auto;
+    /* height: 100%; */
+}
+
+/* Oculta las imágenes */
+.oculta{
+    display: none;
+}
+
+/* Botones Anterior y Siguinte */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 28px;
+    transition: background-color 1s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    /* background-color: rgba(0,0,0,0.8); */
+    /* background-color: #c3570f; */
+    background-color: rgba(252, 88, 33, 0.6);
+  }
+
+.punto {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 1.5s ease;
+}
+  
+.active, .punto:hover {
+    background-color: #717171;
+}
+
+/* Clase para animación de las imagenes del carrusel */
+
+.aparece {
+    animation-name: aparece;
+    animation-duration: 3s;
+}
+  
+@keyframes aparece {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.puntos{
+    position: absolute;
+    bottom: 3em;
+    left: 46%;
+}
+
+.carousel img{
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+
+.botones{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(242, 157, 73, 0.7);
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 2.5em;
+    /* font-weight: bold; */
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+}
+
+.izquierdo{
+    left:10px;
+}
+
+.derecho{
+    right: 10px;
+}
+
+.botones:hover{
+    background-color: rgba(235, 227, 227, 0.7);
+}
+
+/* Habilita las imagenes a mostrar en tablets */
+@media (max-width: 1100px){
+    
+    .imgGrupo1{
+        display: none!important;
+    }
+    .imgGrupo2{
+        display:block!important;
+    }
+    .imgGrupo3{
+        display: none!important;
+    }
+}
+
+/* Habilita las imagenes a mostrar en móviles */
+@media (max-width: 720px){
+    
+    .imgGrupo1{
+        display: none!important;
+    }
+    .imgGrupo2{
+        display: none!important;
+    }
+    .imgGrupo3{
+        display: block!important;
+    }
+}
+
+footer {
+    /* background-color: #7F9F80; */
+    text-align: center;
+    /* background-color: rgb(244, 135, 63) */
+    background-color: rgba(252, 88, 33, 1);
+    /* position: sticky; */
+    padding: 3px 10px;
+}
+
+.pie h5{
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+
+.pie img:hover{
+    width: 1.5em;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+}
+
+.imagen{
+    margin-top: 5px;
+}
+
+/* clase agregada por Fabiana para el formulario */
+/* ***********************formulario***************************************** */
+.contenedorFormulario {
+    /* width: 100%; */
+    /* padding: 0% 10% 0% 20%; */
+    grid-gap: 1px;
+    /* justify-items: center; */
+    align-items: center;
+    display: grid;
+    grid-template-columns: 100%;
+    /* ******************************* */
+    margin: 1% 10% 3%;
+    width: 80%;
+    background-color: rgb(228, 162, 116);
+    /* border: #124076 15px ; */
+    padding: 2% 5% 1%;
+    border-radius: 15px ;
+    box-shadow: #3d3303 10px 10px 20px;
+    /* font-size: 16px; */
+}
+/*   tamaño de letras responsivas para el formularios */
+
+@media (max-width: 768px) {
+    .contenedorFormulario {
+        font-size: 14px; /* Tamaño de letra para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedorFormulario {
+        font-size: 12px; /* Tamaño de letra para pantallas aún más pequeñas */
+    }
+}
+
+.divItem{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin-top: 2%;
+}
+.divItem2{
+    display: grid;
+    grid-template-columns: 100%;
+    margin-top: 2%;
+}
+
+.divBotones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding: 20px;
+    margin: 2%;
+    /* align-items: center; */
+    padding: 5px;
+}
+.textarea{
+    width: 80%;
+    margin-left: 10%;
+}
+.pFormulario{
+    font-style: italic;
+    color: crimson;
+}
+.margen{
+    margin-left: 5%;
+
+}
+
+
+/* ------------------------Estilos Catalogo----------------------------------- */
+/* Estilo contenedor Cel. Motorola */
+main{
+    padding-bottom: 3em;
+}
+#moto {
+	margin: auto;
+	padding-top: 5%;
+	align-content: center;
+   	justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(5, auto);
+	row-gap: 1.8em;
+	gap: 0.18em;
+}
+
+/* Estilo contenedor Cel. Samsung */
+#samsung {
+	margin: auto;
+	padding-top: 5%;
+	align-content: center;
+   	justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(5, auto);
+	row-gap: 1.8em;
+	gap: 0.18em;
+}
+
+/* Estilo contenedor Cel. Xiaomi */
+#xiao {
+	margin: auto;
+	padding-top: 5%;
+	align-content: center;
+   	justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(5, auto);
+	row-gap: 1.8em;
+	gap: 0.18em;
+}
+
+/* Estilo botones filtro por marca de cel */
+#filtro {
+	margin: auto;
+	padding-top: 3em;
+	padding-bottom: 0.5em;
+	align-content: center;
+   	justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(4, auto);
+	column-gap: 4em;
+}
+
+#filtro  button{
+	width: 10em;
+	padding: 0.1em; 
+	font-family: "Poppins", sans-serif;
+	font-size: 0.8em;
+    font-weight: bold;
+	color:rgb(59, 27, 4);
+	box-shadow: 0 0.5em 1em 0 rgba(0,0,0,0.2), 0 0.4em 1.2em 0 rgba(0,0,0,0.19);
+	border: 0.125em solid rgba(195, 87, 15, 0.2);
+	border-radius: 0.3em;
+    background-color: rgba(195, 87, 15, 0.5);
+}
+
+#filtro button {
+	transition-duration: 0.4s;
+  }
+  
+  #filtro button:hover {
+	background-color: rgb(252, 88, 33); 
+	color: white;
+  }
+
+/* Estilo contenedor imagen celular, modelo y precio */
+.articulo img {
+	width: 9em;
+	transition: all 300ms;
+	position: relative;
+	margin: 0em;
+	}
+
+.articulo img:hover {
+	transform: scale(1.15);
+	}
+
+/* Estilo modelo */
+.mod {
+	color: rgb(4, 59, 101);
+	font-size: 0.8em;
+	font-weight: bold;
+	padding: 0.3em;
+	margin: 0em;
+	font-family: "Poppins", sans-serif;
+	text-align: center;
+}
+
+/* Estilo precio */
+.pre {
+	color: rgb(252, 67, 5);
+	font-size: 0.8em;
+	font-weight: bolder;
+	padding: 0em;
+	margin: 0.6em;
+	margin-bottom: 1em;
+	font-family: "Poppins", sans-serif;
+	text-align: center;
+	box-shadow: 0 0.5em 1em 0 rgba(0,0,0,0.2), 0 0.4em 1.2em 0 rgba(0,0,0,0.19);
+}
+
+/* ---------Estilos pagina Producto -------- */
+
+/* Contenedor Principal */
+.contPrincipal{
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2.5em 0;
+	font-family: "Poppins", sans-serif;
+	color: rgb(4, 59, 101);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.textoProd{
+    font-size: 0.8em;
+    margin: 1em;
+}
+
+/* Contenedor Imagen Celular */
+.contFoto img {
+	width: 23em;
+}
+#precioProd{
+    color: rgb(252, 88, 33);
+}
+
+/* Botón "Comprar" */
+.bcomprar{
+	display: block;
+	width: auto;
+	padding: 0.5em;
+	margin-top: 1em;
+	background-color: rgb(252, 88, 33);
+	color: aliceblue;
+	font-family: "Poppins", sans-serif;
+	font-size: 1.2em;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 0.25em;
+	border-color: rgb(252, 88, 33);
+	transition-duration: 0.4s;
+}
+
+.bcomprar:hover {
+	background-color: aliceblue; 
+	color: rgb(177, 14, 14);
+  }
+
+/* Estilo dispositivo medio */
+@media screen and (max-width: 900px) {
+
+	
+	.articulo{
+		margin-bottom: 2em;
+	}
+
+	.articulo img{
+		width: 16em;
+	}
+
+	#filtro  {
+		grid-template-columns: repeat(2, auto);
+		margin: auto;
+	} 
+
+	#filtro button {
+		margin-bottom: 1em;
+        width: 12em;
+        padding: 0.5em; 
+        font-family: "Poppins", sans-serif;
+        font-size: 1em;
+        } 
+	
+	#moto {grid-template-columns: repeat(2, auto); 
+		padding-left: 0; padding-right: 0; 
+		margin-left: 0;margin-right: 0;}
+
+	#samsung {grid-template-columns: repeat(2, auto); 
+		padding-left: 0; padding-right: 0; 
+		margin-left: 0;margin-right: 0;}
+
+	#xiao {grid-template-columns: repeat(2, auto); 
+		padding-left: 0; padding-right: 0; 
+		margin-left: 0;margin-right: 0;}
+
+		.contPrincipal {grid-template-columns: auto;
+		}	
+
+        /* estilos Producto */
+	.contFoto{
+		margin: auto;
+	}
+	.contTexto {
+		text-align: center;
+		}
+
+	.bcomprar{
+			margin-left: auto;
+			margin-right: auto;
+	}
+	
+}
+
+/* Estilo dispositivo pequeño */
+@media screen and (max-width: 600px) {
+   /*  nav ul li a{
+        font-size: 5vw;
+    } */
+	.articulo{
+		margin-bottom: 2em;
+	}
+
+	.articulo img{
+		width: 24em;
+	}
+	
+	 #filtro  {
+		grid-template-columns: auto;
+	} 
+
+	#filtro button {
+		margin-bottom: 1em;
+        width: 12em;
+        padding: 0.2em; 
+        font-family: "Poppins", sans-serif;
+        font-size: 1.5em;
+        } 
+	#moto {grid-template-columns: auto; 
+		padding-left: 0; padding-right: 0; 
+		margin-left: 0;margin-right: 0;}
+
+	#samsung {grid-template-columns: auto; 
+		padding-left: 0; padding-right: 0; 
+		margin-left: 0;margin-right: 0;}
+
+	#xiao {grid-template-columns: auto; 
+		padding-left: 0; padding-right: 0; 
+		margin-left: 0;margin-right: 0;}
+
+	.contPrincipal {grid-template-columns: auto;
+		}	
+	.contFoto{
+		margin: auto;
+	}	
+	.contTexto {
+		text-align: center;
+	}
+	.bcomprar{
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+/* Estilos pagina Nosotros */
+.nos{
+    /* width: 70%; */
+    margin: auto;
+    text-align: center;
+}
+
+/* ****************** iframe responsivo ***************************** */
+iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+}
+@media (max-whidth: 767px){
+    iframe{
+        height:300px;
+    }
+}
+/*********** agregado para la tabla del index_.html *********************/
+
+/* form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #390e8c;
+    border: 1px solid lightslategray;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+/* } */
+
+table {
+    max-width: 90%;
+    width: 40%;
+    
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #e7ae82;
+    border: 1px solid lightslategray;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    
+    
+}
+td{
+    height: 50px;
+}
+
+/* label {
+    display: block;
+    margin-bottom: 15px;
+} */ 
+ /* 
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+} */
+
+input[type="submit"]:hover {
+    background-color: #b66c0c;
+}
+
+/* button {
+    padding: 8px;
+    margin:4px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+} */
+
+button:hover {
+    background-color: #b66c0c;
+}
+
+a {
+    /* padding: 8px; */
+    /* margin:4px; */
+    /* background-color: #fdab13; */
+    color: #1d1a39;
+    border: none;
+    /* border-radius: 5px; */
+    /* cursor: pointer; */
+    text-decoration: none;
+    /* font-size: 85%; */
+    /* font-weight: 800; */
+ }
+
+a:hover {
+    background-color: #b66c0c;
+    color:#fdab13
+} 
